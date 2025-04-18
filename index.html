@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Parsa Parvizi - Creative Web Developer specializing in modern web applications and user experiences"
+    />
+    <meta
+      name="keywords"
+      content="Parsa Parvizi, Web Developer, Frontend Developer, React Developer, Portfolio"
+    />
+    <title>Parsa Parvizi | Aspiring Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .animate-on-scroll.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Mobile Menu Styles */
+      .mobile-menu {
+        display: none;
+      }
+      .mobile-menu.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="bg-[#0a192f] font-[Poppins] text-[#ccd6f6] overflow-x-hidden">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-[#112240]/90 backdrop-blur-md"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          <a href="#" class="text-[#64ffda] text-xl sm:text-2xl font-bold"
+            >Parsa<span class="text-[#ccd6f6]">.dev</span></a
+          >
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-4 lg:space-x-8">
+            <a
+              href="#home"
+              class="text-[#8892b0] hover:text-[#64ffda] transition-colors duration-300"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-[#8892b0] hover:text-[#64ffda] transition-colors duration-300"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="text-[#8892b0] hover:text-[#64ffda] transition-colors duration-300"
+              >Skills</a
+            >
+            <a
+              href="#contact"
+              class="text-[#8892b0] hover:text-[#64ffda] transition-colors duration-300"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="md:hidden text-[#64ffda] p-2">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-[#112240] py-4">
+          <div class="flex flex-col space-y-4 px-4">
+            <a
+              href="#home"
+              class="text-[#8892b0] hover:text-[#64ffda] transition-colors duration-300"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-[#8892b0] hover:text-[#64ffda] transition-colors duration-300"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="text-[#8892b0] hover:text-[#64ffda] transition-colors duration-300"
+              >Skills</a
+            >
+            <a
+              href="#contact"
+              class="text-[#8892b0] hover:text-[#64ffda] transition-colors duration-300"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-20"
+    >
+      <div class="max-w-7xl w-full">
+        <div class="animate-on-scroll text-center md:text-left">
+          <span class="text-[#64ffda] text-base sm:text-lg block mb-4"
+            >Hi, I'm</span
+          >
+          <h1
+            class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#ccd6f6] to-[#64ffda] bg-clip-text text-transparent"
+          >
+            Parsa Parvizi
+          </h1>
+          <div class="mb-6">
+            <p class="text-xl sm:text-2xl md:text-4xl text-[#8892b0]">
+              A <span
+                id="dynamic-text"
+                class="text-[#64ffda] font-semibold"
+              ></span>
+            </p>
+          </div>
+          <p
+            class="text-base sm:text-lg text-[#8892b0] max-w-xl mb-8 mx-auto md:mx-0"
+          >
+            I'm a self-taught developer on a journey to master web development. 
+            Currently learning and building projects to strengthen my skills in 
+            modern web technologies.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+          >
+            <a
+              href="#learning"
+              class="px-6 py-3 bg-[#64ffda] text-[#0a192f] rounded-lg font-medium hover:-translate-y-1 transition-all duration-300 text-center"
+            >
+              My Learning Journey
+            </a>
+            <a
+              href="#contact"
+              class="px-6 py-3 border-2 border-[#64ffda] text-[#64ffda] rounded-lg font-medium hover:-translate-y-1 transition-all duration-300 text-center"
+            >
+              Connect With Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Updated About Section -->
+    <section id="about" class="py-20 sm:py-32 bg-[#112240]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-20 animate-on-scroll relative">
+                About Me
+                <div class="absolute w-16 sm:w-20 h-1 bg-[#64ffda] bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
+            </h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="animate-on-scroll space-y-6">
+                    <p class="text-base sm:text-lg text-[#8892b0] leading-relaxed">
+                        Hello! I'm Parsa, and I've embarked on an exciting journey into web development. 
+                        What started as curiosity has grown into a passionate pursuit of creating things for the web.
+                    </p>
+                    <p class="text-base sm:text-lg text-[#8892b0] leading-relaxed">
+                        As a self-taught developer, I believe in the power of continuous learning and 
+                        problem-solving. Every day, I'm working to expand my knowledge and build my skills 
+                        through hands-on practice and real-world projects.
+                    </p>
+                    <p class="text-base sm:text-lg text-[#8892b0] leading-relaxed">
+                        Currently focusing on:
+                        <ul class="list-disc list-inside mt-2 space-y-2">
+                            <li class="text-[#64ffda]">React.js for modern web applications</li>
+                            <li class="text-[#64ffda]">Responsive design principles</li>
+                            <li class="text-[#64ffda]">Web accessibility standards</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-[#0a192f]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-4xl font-bold text-center text-[#ccd6f6] mb-16 relative animate-on-scroll"
+        >
+          My Skills
+          <div
+            class="absolute w-20 h-1 bg-[#64ffda] bottom-0 left-1/2 transform -translate-x-1/2 mt-4"
+          ></div>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- HTML -->
+          <div
+            class="group bg-[#112240] rounded-xl p-8 hover:-translate-y-2 transition-all duration-300 ease-out animate-on-scroll border border-[#233554] hover:border-[#64ffda]"
+          >
+            <div class="flex items-center justify-center">
+              <i
+                class="fab fa-html5 text-6xl text-[#64ffda] group-hover:scale-110 transition-transform duration-300"
+              ></i>
+            </div>
+            <h3
+              class="text-xl font-semibold text-center text-[#ccd6f6] mt-6 mb-4"
+            >
+              HTML5
+            </h3>
+            <div class="relative h-2 bg-[#1e293b] rounded-full overflow-hidden">
+              <div
+                class="absolute top-0 left-0 h-full w-[90%] bg-gradient-to-r from-[#64ffda] to-[#00b4d8] rounded-full transform origin-left transition-transform duration-1000"
+              ></div>
+            </div>
+            <p class="text-right text-[#8892b0] mt-2">90%</p>
+          </div>
+
+          <!-- CSS -->
+          <div
+            class="group bg-[#112240] rounded-xl p-8 hover:-translate-y-2 transition-all duration-300 ease-out animate-on-scroll border border-[#233554] hover:border-[#64ffda]"
+          >
+            <div class="flex items-center justify-center">
+              <i
+                class="fab fa-css3-alt text-6xl text-[#64ffda] group-hover:scale-110 transition-transform duration-300"
+              ></i>
+            </div>
+            <h3
+              class="text-xl font-semibold text-center text-[#ccd6f6] mt-6 mb-4"
+            >
+              CSS3
+            </h3>
+            <div class="relative h-2 bg-[#1e293b] rounded-full overflow-hidden">
+              <div
+                class="absolute top-0 left-0 h-full w-[85%] bg-gradient-to-r from-[#64ffda] to-[#00b4d8] rounded-full transform origin-left transition-transform duration-1000"
+              ></div>
+            </div>
+            <p class="text-right text-[#8892b0] mt-2">85%</p>
+          </div>
+
+          <!-- Tailwind -->
+          <div
+            class="group bg-[#112240] rounded-xl p-8 hover:-translate-y-2 transition-all duration-300 ease-out animate-on-scroll border border-[#233554] hover:border-[#64ffda]"
+          >
+            <div class="flex items-center justify-center">
+              <svg
+                class="w-16 h-16 text-[#64ffda] group-hover:scale-110 transition-transform duration-300"
+                viewBox="0 0 32 32"
+                fill="currentColor"
+              >
+                <path
+                  d="M9 13.7q1.4-5.6 7-5.6c5.6 0 6.3 4.2 9.1 4.9q2.8.7 4.9-2.1-1.4 5.6-7 5.6c-5.6 0-6.3-4.2-9.1-4.9q-2.8-.7-4.9 2.1Zm-7 8.4q1.4-5.6 7-5.6c5.6 0 6.3 4.2 9.1 4.9q2.8.7 4.9-2.1-1.4 5.6-7 5.6c-5.6 0-6.3-4.2-9.1-4.9q-2.8-.7-4.9 2.1Z"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-xl font-semibold text-center text-[#ccd6f6] mt-6 mb-4"
+            >
+              Tailwind CSS
+            </h3>
+            <div class="relative h-2 bg-[#1e293b] rounded-full overflow-hidden">
+              <div
+                class="absolute top-0 left-0 h-full w-[82%] bg-gradient-to-r from-[#64ffda] to-[#00b4d8] rounded-full transform origin-left transition-transform duration-1000"
+              ></div>
+            </div>
+            <p class="text-right text-[#8892b0] mt-2">82%</p>
+          </div>
+
+          <!-- JavaScript -->
+          <div
+            class="group bg-[#112240] rounded-xl p-8 hover:-translate-y-2 transition-all duration-300 ease-out animate-on-scroll border border-[#233554] hover:border-[#64ffda]"
+          >
+            <div class="flex items-center justify-center">
+              <i
+                class="fab fa-js text-6xl text-[#64ffda] group-hover:scale-110 transition-transform duration-300"
+              ></i>
+            </div>
+            <h3
+              class="text-xl font-semibold text-center text-[#ccd6f6] mt-6 mb-4"
+            >
+              JavaScript
+            </h3>
+            <div class="relative h-2 bg-[#1e293b] rounded-full overflow-hidden">
+              <div
+                class="absolute top-0 left-0 h-full w-[80%] bg-gradient-to-r from-[#64ffda] to-[#00b4d8] rounded-full transform origin-left transition-transform duration-1000"
+              ></div>
+            </div>
+            <p class="text-right text-[#8892b0] mt-2">80%</p>
+          </div>
+
+          <!-- React -->
+          <div
+            class="group bg-[#112240] rounded-xl p-8 hover:-translate-y-2 transition-all duration-300 ease-out animate-on-scroll border border-[#233554] hover:border-[#64ffda]"
+          >
+            <div class="flex items-center justify-center">
+              <i
+                class="fab fa-react text-6xl text-[#64ffda] group-hover:scale-110 transition-transform duration-300 group-hover:rotate-180 transition-all duration-1000"
+              ></i>
+            </div>
+            <h3
+              class="text-xl font-semibold text-center text-[#ccd6f6] mt-6 mb-4"
+            >
+              React
+            </h3>
+            <div class="relative h-2 bg-[#1e293b] rounded-full overflow-hidden">
+              <div
+                class="absolute top-0 left-0 h-full w-[85%] bg-gradient-to-r from-[#64ffda] to-[#00b4d8] rounded-full transform origin-left transition-transform duration-1000"
+              ></div>
+            </div>
+            <p class="text-right text-[#8892b0] mt-2">85%</p>
+          </div>
+
+          <!-- Git -->
+          <div
+            class="group bg-[#112240] rounded-xl p-8 hover:-translate-y-2 transition-all duration-300 ease-out animate-on-scroll border border-[#233554] hover:border-[#64ffda]"
+          >
+            <div class="flex items-center justify-center">
+              <i
+                class="fab fa-git-alt text-6xl text-[#64ffda] group-hover:scale-110 transition-transform duration-300"
+              ></i>
+            </div>
+            <h3
+              class="text-xl font-semibold text-center text-[#ccd6f6] mt-6 mb-4"
+            >
+              Git
+            </h3>
+            <div class="relative h-2 bg-[#1e293b] rounded-full overflow-hidden">
+              <div
+                class="absolute top-0 left-0 h-full w-[88%] bg-gradient-to-r from-[#64ffda] to-[#00b4d8] rounded-full transform origin-left transition-transform duration-1000"
+              ></div>
+            </div>
+            <p class="text-right text-[#8892b0] mt-2">88%</p>
+          </div>
+
+          <!-- TypeScript -->
+          <div
+            class="group bg-[#112240] rounded-xl p-8 hover:-translate-y-2 transition-all duration-300 ease-out animate-on-scroll border border-[#233554] hover:border-[#64ffda]"
+          >
+            <div class="flex items-center justify-center w-16 h-16 mx-auto">
+              <svg
+                viewBox="0 0 128 128"
+                class="w-full h-full text-[#64ffda] group-hover:scale-110 transition-transform duration-300"
+              >
+                <path
+                  fill="currentColor"
+                  d="M2 63.91v62.5h125v-125H2zm100.73-5a15.56 15.56 0 017.82 4.5 20.58 20.58 0 013 4c0 .16-5.4 3.81-8.69 5.85-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 00-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.58 4.58 0 00.54 2.34c.83 1.73 2.38 2.76 7.24 4.86 8.95 3.85 12.78 6.39 15.16 10 2.66 4 3.25 10.46 1.45 15.24-2 5.2-6.9 8.73-13.83 9.9a38.32 38.32 0 01-9.52-.1A23 23 0 0180 109.19c-1.15-1.27-3.39-4.58-3.25-4.82a9.34 9.34 0 011.15-.73l4.6-2.64 3.59-2.08.75 1.11a16.78 16.78 0 004.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 00.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48 16.48 0 01-3.43-6.25 25 25 0 01-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.66 31.66 0 019.49.26zm-29.34 5.24v5.12H57.16v46.23H45.65V69.26H29.38v-5a49.19 49.19 0 01.14-5.16c.06-.08 10.87-.12 22.81-.1l22.56.05z"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-xl font-semibold text-center text-[#ccd6f6] mt-6 mb-4"
+            >
+              TypeScript
+            </h3>
+            <div class="relative h-2 bg-[#1e293b] rounded-full overflow-hidden">
+              <div
+                class="absolute top-0 left-0 h-full w-[75%] bg-gradient-to-r from-[#64ffda] to-[#00b4d8] rounded-full transform origin-left transition-transform duration-1000"
+              ></div>
+            </div>
+            <p class="text-right text-[#8892b0] mt-2">75%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Updated Learning Journey Section -->
+    <section id="learning" class="py-20 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-20 animate-on-scroll relative">
+                Learning Journey
+                <div class="absolute w-16 sm:w-20 h-1 bg-[#64ffda] bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Current Project -->
+                <div class="bg-[#112240] rounded-lg p-6 hover:transform hover:-translate-y-2 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-[#64ffda]">Portfolio Website</h3>
+                    <p class="text-[#8892b0] mb-4">My first project - this very website! Built to learn and showcase my growing skills in web development.</p>
+                    <div class="flex gap-3 text-sm text-[#64ffda]">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Tailwind css</span>
+                    </div>
+                </div>
+
+                <!-- Learning Resources -->
+                <div class="bg-[#112240] rounded-lg p-6 hover:transform hover:-translate-y-2 transition-all duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-[#64ffda]">Current Learning</h3>
+                    <p class="text-[#8892b0] mb-4">Resources and platforms I'm using to learn web development:</p>
+                    <ul class="text-[#8892b0] list-disc list-inside space-y-2">
+                        <li>freeCodeCamp</li>
+                        <li>The Odin Project</li>
+                        <li>YouTube Tutorials</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 sm:py-32 bg-[#112240]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <h2
+          class="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-20 animate-on-scroll relative"
+        >
+          Get In Touch
+          <div
+            class="absolute w-16 sm:w-20 h-1 bg-[#64ffda] bottom-0 left-1/2 transform -translate-x-1/2 mt-4"
+          ></div>
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-8 sm:gap-12">
+          <!-- Contact Form -->
+          <div class="animate-on-scroll">
+            <form id="contact-form" class="space-y-4 sm:space-y-6">
+              <div>
+                <label for="name" class="block text-[#8892b0] mb-2">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  class="w-full px-4 py-3 bg-[#0a192f] border border-[#233554] rounded-lg focus:border-[#64ffda] focus:outline-none text-[#ccd6f6] transition-colors duration-300"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-[#8892b0] mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  class="w-full px-4 py-3 bg-[#0a192f] border border-[#233554] rounded-lg focus:border-[#64ffda] focus:outline-none text-[#ccd6f6] transition-colors duration-300"
+                />
+              </div>
+
+              <div>
+                <label for="message" class="block text-[#8892b0] mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  sm:rows="6"
+                  required
+                  class="w-full px-4 py-3 bg-[#0a192f] border border-[#233554] rounded-lg focus:border-[#64ffda] focus:outline-none text-[#ccd6f6] transition-colors duration-300 resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full sm:w-auto px-6 py-3 bg-[#64ffda] text-[#0a192f] rounded-lg font-medium hover:-translate-y-1 transition-all duration-300"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="space-y-6 sm:space-y-8 animate-on-scroll">
+            <div class="flex items-center space-x-4">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 bg-[#0a192f] rounded-lg flex items-center justify-center"
+              >
+                <i
+                  class="fas fa-envelope text-[#64ffda] text-lg sm:text-xl"
+                ></i>
+              </div>
+              <div>
+                <h3 class="text-[#ccd6f6] font-medium">Email</h3>
+                <p class="text-sm sm:text-base text-[#8892b0]">
+                  parsaparvizi018@gmail.com
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 bg-[#0a192f] rounded-lg flex items-center justify-center"
+              >
+                <i class="fas fa-phone text-[#64ffda] text-lg sm:text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-[#ccd6f6] font-medium">Phone</h3>
+                <p class="text-sm sm:text-base text-[#8892b0]">0990 329 2529</p>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 bg-[#0a192f] rounded-lg flex items-center justify-center"
+              >
+                <i
+                  class="fas fa-map-marker-alt text-[#64ffda] text-lg sm:text-xl"
+                ></i>
+              </div>
+              <div>
+                <h3 class="text-[#ccd6f6] font-medium">Location</h3>
+                <p class="text-sm sm:text-base text-[#8892b0]">Tehran,ferdos blv</p>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="pt-6 sm:pt-8">
+              <h3 class="text-[#ccd6f6] font-medium mb-4">Follow Me</h3>
+              <div class="flex space-x-6">
+                <a
+                  href="#"
+                  class="text-[#8892b0] hover:text-[#64ffda] transition-colors duration-300"
+                >
+                  <i class="fab fa-github text-xl sm:text-2xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-[#8892b0] hover:text-[#64ffda] transition-colors duration-300"
+                >
+                  <i class="fab fa-linkedin text-xl sm:text-2xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-[#8892b0] hover:text-[#64ffda] transition-colors duration-300"
+                >
+                  <i class="fab fa-instagram text-xl sm:text-2xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 sm:py-6 bg-[#0a192f] border-t border-[#233554]">
+      <div class="text-center text-[#8892b0] text-sm sm:text-base">
+        <p>&copy; 2024 Parsa Parvizi. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("active");
+        });
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.remove("active");
+        });
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+
+        if (
+          !mobileMenu.contains(event.target) &&
+          !mobileMenuButton.contains(event.target)
+        ) {
+          mobileMenu.classList.remove("active");
+        }
+      });
+
+      // Scroll animations
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".animate-on-scroll").forEach((element) => {
+        observer.observe(element);
+      });
+
+      // Typing effect
+      const phrases = [
+        'Self-Taught Developer',
+        'Continuous Learner',
+        'Problem Solver',
+        'Future Full-Stack Dev'
+      ];
+      let currentPhraseIndex = 0;
+      let currentCharIndex = 0;
+      let isDeleting = false;
+      let typingSpeed = 100;
+
+      function typeEffect() {
+        const currentPhrase = phrases[currentPhraseIndex];
+        const typingElement = document.getElementById("dynamic-text");
+
+        if (isDeleting) {
+          typingElement.textContent = currentPhrase.substring(
+            0,
+            currentCharIndex - 1
+          );
+          currentCharIndex--;
+          typingSpeed = 50;
+        } else {
+          typingElement.textContent = currentPhrase.substring(
+            0,
+            currentCharIndex + 1
+          );
+          currentCharIndex++;
+          typingSpeed = 100;
+        }
+
+        if (!isDeleting && currentCharIndex === currentPhrase.length) {
+          isDeleting = true;
+          typingSpeed = 1000; // Pause at end
+        } else if (isDeleting && currentCharIndex === 0) {
+          isDeleting = false;
+          currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+          typingSpeed = 200; // Pause before starting new word
+        }
+
+        setTimeout(typeEffect, typingSpeed);
+      }
+
+      typeEffect();
+    </script>
+  </body>
+</html>
