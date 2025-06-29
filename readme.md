@@ -27,5 +27,3 @@ This project is open source and available under the MIT License.
 Feel free to reach out if you have any questions or would like to connect!
 
 - Email: [parsaparvizi018@gmail.com]
-- LinkedIn: [your-linkedin-profile]
-- GitHub: [your-github-profile]
